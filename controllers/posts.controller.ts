@@ -15,7 +15,9 @@ const getPosts = async (req: Request, res: Response): Promise<void> => {
 const createPosts = async (req: Request, res: Response): Promise<void> => {
   try {
     const posts = generateFakePosts();
-    console.log(posts[0].title);
+    posts.forEach(post => {
+      Posts.create(post);
+    });
     res.json(posts);
   } catch (error) {
     console.error(error);
@@ -23,7 +25,7 @@ const createPosts = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
-const generateFakePosts = () => {
+const generateFakePosts = (): Array<any> => {
   const createRandomPosts = () => {
     return {
       title: faker.commerce.productName(),
