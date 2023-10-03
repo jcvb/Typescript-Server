@@ -25,6 +25,7 @@
     "postgres"
   ],
   "conventionalCommits.scopes": [
-    "API"
+    "API",
+    "Documentation"
   ]
 }
