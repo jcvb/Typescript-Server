@@ -1,11 +1,11 @@
 import app from "./app";
 import { sequelize } from "../database/database";
 
-import "../models/Posts";
+// import "../models/Posts";
 
 async function main() {
   try {
-    await sequelize.sync();
+    await sequelize.sync({ force: false });
     app.listen(8888);
     console.log("Server running on port", 8888);
   } catch (error) {

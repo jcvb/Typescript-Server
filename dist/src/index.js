@@ -14,11 +14,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./app"));
 const database_1 = require("../database/database");
-require("../models/Posts");
+// import "../models/Posts";
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield database_1.sequelize.sync();
+            yield database_1.sequelize.sync({ force: false });
             app_1.default.listen(8888);
             console.log("Server running on port", 8888);
         }
