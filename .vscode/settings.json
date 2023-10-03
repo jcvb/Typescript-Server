@@ -20,7 +20,9 @@
   },
   "peacock.color": "#42b883",
   "cSpell.words": [
-    "Picsum"
+    "hstore",
+    "Picsum",
+    "postgres"
   ],
   "conventionalCommits.scopes": [
     "API"
